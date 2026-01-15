@@ -1,0 +1,199 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>More Morgellons</title>
+
+  <meta name="description" content="More Morgellons: listener voicemails + featured episodes." />
+  <meta property="og:title" content="More Morgellons" />
+  <meta property="og:description" content="Leave a 60-second voicemail for the show and explore featured episodes." />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="wrap">
+    <div class="hero">
+      <div class="badge" aria-label="Site badge">
+        <span class="dot" aria-hidden="true"></span>
+        <span>More Morgellons • listener voicemail + episodes</span>
+      </div>
+
+      <h1 class="title">More Morgellons</h1>
+
+      <p class="sub">
+        Leave a 60-second voicemail for the show. Messages optional. Keep it under 2,000 characters.
+      </p>
+
+      <div class="header-actions">
+        <a class="pill" href="#voicemail">🎙 Leave a voicemail</a>
+        <a class="pill" href="#episodes">▶ Episodes</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ================= VOICEMAIL ================= -->
+<section class="card" id="voicemail" aria-labelledby="voicemailTitle">
+  <div class="top">
+    <div>
+      <h2 id="voicemailTitle">Leave a 60-second voicemail</h2>
+      <p class="hint">
+        Record in your browser, then submit. Works best on modern mobile browsers over HTTPS.
+      </p>
+    </div>
+
+    <div class="badge" id="micBadge" aria-live="polite">
+      <span class="dot" style="opacity:.6" aria-hidden="true"></span>
+      <span>mic: idle</span>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <div class="row">
+      <button class="primary" id="startBtn" type="button">Start recording</button>
+      <button class="danger" id="stopBtn" type="button" disabled>Stop</button>
+      <button id="resetBtn" type="button" disabled>Discard</button>
+    </div>
+
+    <div class="meter" aria-label="Recording timer">
+      <div class="bar">
+        <div class="fill" id="fill"></div>
+      </div>
+      <div class="time" id="time">01:00</div>
+    </div>
+
+    <div class="status" id="status" aria-live="polite">
+      <strong>Tip:</strong> If the mic prompt doesn’t appear, check your browser’s site permissions.
+    </div>
+
+    <label class="small" for="nameInput"><strong>Name</strong> (optional)</label>
+    <input
+      id="nameInput"
+      type="text"
+      placeholder="Your name or alias"
+      maxlength="80"
+      autocomplete="off"
+    />
+
+    <label class="small" for="messageInput"><strong>Message</strong> (optional)</label>
+    <textarea
+      id="messageInput"
+      rows="5"
+      placeholder="Context helps. Keep it under 2,000 characters."
+      maxlength="2000"
+    ></textarea>
+
+    <div class="small">
+      By submitting, you confirm you own this audio and are okay with it being reviewed and potentially used on the show.
+      Please don’t include private medical details or identifying info about others.
+      If this is an emergency, call 911.
+    </div>
+
+    <div class="row">
+      <button class="primary" id="submitBtn" type="button" disabled>Submit to the show</button>
+      <span class="small" id="submitHint">Record first to enable submit.</span>
+    </div>
+
+    <!-- Preview -->
+    <div class="audio-wrap" id="audioWrap" style="display:none;">
+      <div class="small"><strong>Preview (local)</strong></div>
+      <audio id="playback" controls></audio>
+      <div class="row">
+        <a class="pill" id="downloadLink" href="#">⬇ Download your copy</a>
+        <span class="small" id="fileInfo"></span>
+      </div>
+    </div>
+
+    <!-- Result / Toast -->
+    <div class="status" id="result" style="display:none;" aria-live="polite"></div>
+
+  </div>
+</section>
+
+<!-- ================= EPISODES ================= -->
+<section class="card" id="episodes">
+  <div class="top">
+    <h2>Featured Episodes</h2>
+  </div>
+
+  <div class="content">
+
+    <div style="margin-bottom:22px;">
+      <a
+        href="https://open.spotify.com/show/4sINFiSxSLSKhUO8cE8Ofc"
+        target="_blank"
+        rel="noopener"
+        class="pill"
+      >
+        ▶ Listen to More Morgellons on Spotify
+      </a>
+    </div>
+
+    <iframe src="https://open.spotify.com/embed/episode/5osnxdUybtYfbJikY3s8by"
+      width="100%" height="152" style="border-radius:12px"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"></iframe>
+
+    <iframe src="https://open.spotify.com/embed/episode/1R6gSbhJGTIb36CEvEupBu"
+      width="100%" height="152" style="border-radius:12px"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"></iframe>
+
+    <iframe src="https://open.spotify.com/embed/episode/0hVeIo7kvK0iPm1cAOFTnl"
+      width="100%" height="152" style="border-radius:12px"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"></iframe>
+
+    <iframe src="https://open.spotify.com/embed/episode/4GP7OS2OKwWx4OwNLuvVLl"
+      width="100%" height="152" style="border-radius:12px"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"></iframe>
+
+    <iframe src="https://open.spotify.com/embed/episode/5xlOP5Z9kTydk6gjo293v0"
+      width="100%" height="152" style="border-radius:12px"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"></iframe>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="grid-note">
+    <div>
+      © <span id="year"></span> More Morgellons<br>
+      <span class="small">
+        Related projects:
+        <a href="https://morgellonscience.com" target="_blank" rel="noopener noreferrer">
+          Morgellons Science
+        </a>
+        ·
+        <a href="https://pandorasmatchbox.org" target="_blank" rel="noopener noreferrer">
+          Pandora’s Matchbox
+        </a>
+      </span>
+    </div>
+
+    <div>
+      Built by CC 
+    </div>
+  </div>
+</footer>
+
+
+<!-- ================= JS ================= -->
+<script src="/app.js"></script>
+
+</body>
+</html>
